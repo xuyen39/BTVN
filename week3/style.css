@@ -1,0 +1,29 @@
+p {
+  color: green;
+}
+p {
+  color: blue;
+  font-size: 20px;
+}
+h1 {
+  font-size: 30px;
+}
+div {
+  width: 50%; /* Chiếm 50% chiều rộng của phần tử cha */
+}
+/* Phần tử cha có font-size là 16px */
+div {
+  font-size: 16px;
+}
+/* Phần tử con sử dụng em, nên 1.5em sẽ là 1.5 * 16px = 24px */
+p {
+  font-size: 1.5em; /* Văn bản có kích thước 24px */
+}
+/* Thiết lập font-size của phần tử gốc là 16px */
+html {
+  font-size: 16px;
+}
+/* Sử dụng rem, nên 1.5rem sẽ là 1.5 * 16px = 24px */
+p {
+  font-size: 1.5rem; /* Văn bản có kích thước 24px */
+}

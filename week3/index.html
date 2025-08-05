@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEEK 3 WEB</title>
+    <style>
+      p {
+        color: blue;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      Những dòng text văn bản đầu tiên. Nó màu blue vì ở phần head style có đề
+      cập văn bản màu blue. Nhưng khi thêm link ở html và gắn màu green vào văn
+      bản ở css thì văn bản trở thành màu green.
+    </p>
+    Bạn nghĩ nó màu gì? Nó không phải màu blue vì nó k phải văn bản.
+    <h1>I. Giới thiệu CSS</h1>
+    <ul>
+      <li>
+        CSS (Cascading Style Sheets) là ngôn ngữ dùng để mô tả cách hiển thị của
+        các phần tử HTML (h1, table, p, . . .) trên trang web.
+      </li>
+      <li>
+        Nó quyết định về bố cục, màu sắc, kiểu chữ, kích thước, khoảng cách giữa
+        các phần tử, v.v. CSS giúp trang web đẹp hơn.
+      </li>
+    </ul>
+
+    <h1>II. Comment trong CSS</h1>
+    <ul>
+      <li>Comments giúp ghi chú mã và được trình duyệt bỏ qua</li>
+      <li>Comment 1 dòng hoặc nhiều dòng: /* ........ */ hoặc nhấn Ctrl + /</li>
+    </ul>
+    <!-- /* Đây là một comment trong CSS */ -->
+
+    <h1>III. Các cách style trang web</h1>
+    <h2>1. Inline CSS</h2>
+    <ul>
+      <li>Được viết trực tiếp trong thuộc tính style của thẻ HTML.</li>
+      <li>
+        Cách này tiện lợi cho các chỉnh sửa nhỏ và nhanh, nhưng không tối ưu cho
+        dự án lớn.
+      </li>
+    </ul>
+    <p style="color: red">Văn bản này có màu xanh.</p>
+    <h3 style="color: rgb(172, 127, 255)">Tôi đang test thử màu.</h3>
+    <ol style="color: darkgreen">
+      Tôi đang dùng list màu xanh lá đậm
+      <li style="color: red">màu đỏ</li>
+      <li style="color: pink">màu hồng</li>
+      <li style="color: orange">màu cam</li>
+      <li style="color: yellow">màu vàng</li>
+      <li>màu xanh lá đậm</li>
+    </ol>
+
+    <h2>Internal CSS</h2>
+    <ul>
+      <li>Được viết trong thẻ style bên trong phần head của trang HTML.</li>
+      <li>
+        Cách này tiện lợi cho các trang HTML đơn giản khi chỉ có một tệp HTML.
+      </li>
+    </ul>
+
+    <h2>3. External CSS</h2>
+    <p>
+      Được liên kết thông qua một file CSS riêng biệt, giúp quản lý CSS dễ dàng
+      hơn: Lúc này bạn sử dụng thẻ link đặt trong phần head, với giá trị của
+      thuộc tính href là đường dẫn tới file style.css
+    </p>
+
+    <h2>4. So sánh mực độ sử dụng của 3 cách style css</h2>
+    <ul>
+      <li>Inline css: sử dụng để test các thuộc tính css, hiếm khi sử dụng</li>
+      <li>
+        Internal css: sử dụng nếu các em muốn style trong file html cho tiện,
+        không khuyến khích dùng.
+      </li>
+      <li>External css: đây là cách style được dùng nhiều nhất.</li>
+    </ul>
+
+    <h1>IV. Viết CSS như thế nào?</h1>
+    <ul>
+      <li>
+        Có 2 phần, chọn được phần tử html mình muốn chọn và thêm thuộc tính mình
+        muốn.
+      </li>
+      <li>Ta có file HTML như sau:</li>
+      <textarea name="message" rows="10" cols="50">
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trang mẫu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Đây là một đoạn văn bản có màu xanh và kích thước 20px.</p>
+  </body>
+</html>
+    </textarea
+      >
+      <li>
+        Bước 1: Chọn 1 phần tử bạn cần style Nhìn đoạn html trên, tôi muốn style
+        cho thẻ p. Tôi sẽ chọn thẻ p
+      </li>
+      <li>
+        Bước 2: Mở ngoặc nhọn { } cho khối quy tắc CSS. Bên trong ngoặc nhọn,
+        bạn sẽ định nghĩa các thuộc tính để định dạng cho phần tử được chọn.
+      </li>
+      <div style="background-color: #dddcd5">
+        p {
+        <br />
+        /* Các thuộc tính sẽ được viết ở đây */
+        <br />
+        }
+      </div>
+      <li>
+        Bước 3: Thêm thuộc tính và giá trị Bên trong ngoặc nhọn, bạn sẽ khai báo
+        các thuộc tính (properties) và giá trị (values) tương ứng. Mỗi thuộc
+        tính CSS xác định một phần của định dạng và cần có một giá trị đi kèm:
+      </li>
+    </ul>
+
+    <h1>V. Các thuộc tính CSS cơ bản</h1>
+    <h2>1. CSS Units (Đơn vị)</h2>
+    CSS hỗ trợ nhiều đơn vị đo lường, bao gồm cả đơn vị tuyệt đối (cố định) và
+    tương đối (dựa vào phần tử hoặc màn hình).
+    <ul>
+      <li>
+        px (pixel): Đơn vị cố định, biểu thị số pixel trên màn hình. Thường được
+        dùng khi bạn muốn kích thước chính xác, không thay đổi theo kích thước
+        màn hình hay phần tử cha
+      </li>
+      <li>
+        % (phần trăm): Đơn vị tương đối, thường được dùng để xác định kích thước
+        tương đối so với phần tử cha.
+      </li>
+      <li>
+        em:
+        <ul>
+          <li>
+            Đơn vị tương đối, thường được dùng để xác định kích thước tương đối
+            so với phần tử cha trực tiếp
+          </li>
+          <li>1em = 100% kích thước font của phần tử cha.</li>
+        </ul>
+      </li>
+      <li>
+        rem:
+        <ul>
+          <li>
+            Đơn vị tương đối nhưng dựa vào kích thước font của phần tử gốc
+            (html) thay vì phần tử cha trực tiếp.
+          </li>
+          <li>1rem = 100% kích thước font của phần tử gốc (html).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>2. CSS Backgrounds</h2>
+    <h2>3. CSS Color</h2>
+    <h2>4. CSS Border</h2>
+    <h2>5. CSS Text</h2>
+    <h2>6. CSS Font</h2>
+    <h2>7. Width, Height</h2>
+    <h2>8. Box Model</h2>
+    <h2>9. Padding, Margin</h2>
+    <h3>9.1. Padding</h3>
+    <h3>9.2. Margin</h3>
+    <h2>10. Display, Block, Inline, Inline-block</h2>
+    <h3>a. Display</h3>
+    <h3>b. Block</h3>
+    <h3>c. Inline</h3>
+    <h3>d. Inline-block</h3>
+    <h1>VI. Reset CSS</h1>
+  </body>
+</html>
